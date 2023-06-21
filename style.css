@@ -62,8 +62,59 @@ p, h1, h2, h3, h4, h5, h6 {
     --ff-header: 'Big Shoulders Display', cursive;
     --ff-main: 'Lexend Deca', sans-serif;
 
-    --fs-main: 15px;
+    --fs-main: 0.938rem;
     
     --fw-regular: 400;
     --fw-bold: 700;
+}
+
+body {
+  font-family: var(--ff-main);
+  font-size: var(--fs-main);
+  font-weight: var(--fw-regular);
+  display: grid;
+  place-content: center;
+  margin-right: 10rem;
+}
+
+.container {
+  display: flex;
+  width: 57.5rem;
+  height: 31.25rem;
+  overflow: hidden;
+  border-radius: 0.75rem;
+}
+
+.column {
+  padding: 3.25rem;
+  display: grid;
+  
+}
+.column-sedans {
+  background-color: var(--primary-bright);
+}
+
+.column-suvs {
+  background-color: var(--primary-mid);
+
+}
+
+.column-luxury {
+  background-color: var(--primary-dark);
+
+}
+
+p {
+  color: var(--neutral-paragraphs);
+}
+
+h1 {
+  color: var(--neutral-background);
+  font-weight: var(--fw-bold);
+  font-family: var(--ff-header);
+  text-transform: uppercase;
+}
+
+.btn {
+
 }
