@@ -1,7 +1,9 @@
 /*
   1. Use a more-intuitive box-sizing model.
 */
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
 }
 /*
@@ -9,11 +11,13 @@
 */
 * {
   margin: 0;
+  padding: 0;
 }
 /*
   3. Allow percentage-based heights in the application
 */
-html, body {
+html,
+body {
   height: 100%;
 }
 /*
@@ -28,44 +32,58 @@ body {
 /*
   6. Improve media defaults
 */
-img, picture, video, canvas, svg {
+img,
+picture,
+video,
+canvas,
+svg {
   display: block;
   max-width: 100%;
 }
 /*
   7. Remove built-in form typography styles
 */
-input, button, textarea, select {
+input,
+button,
+textarea,
+select {
   font: inherit;
 }
 /*
   8. Avoid text overflows
 */
-p, h1, h2, h3, h4, h5, h6 {
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   overflow-wrap: break-word;
 }
 /*
   9. Create a root stacking context
 */
-#root, #__next {
+#root,
+#__next {
   isolation: isolate;
 }
 
 :root {
-    --primary-bright: hsl(31, 77%, 52%);
-    --primary-mid: hsl(184, 100%, 22%);
-    --primary-dark: hsl(179, 100%, 13%);
+  --primary-bright: hsl(31, 77%, 52%);
+  --primary-mid: hsl(184, 100%, 22%);
+  --primary-dark: hsl(179, 100%, 13%);
 
-    --neutral-paragraphs: hsla(0, 0%, 100%, 0.75);
-    --neutral-background: hsl(0, 0%, 95%);
+  --neutral-paragraphs: hsla(0, 0%, 100%, 0.75);
+  --neutral-background: hsl(0, 0%, 95%);
 
-    --ff-header: 'Big Shoulders Display', cursive;
-    --ff-main: 'Lexend Deca', sans-serif;
+  --ff-header: "Big Shoulders Display", cursive;
+  --ff-main: "Lexend Deca", sans-serif;
 
-    --fs-main: 0.938rem;
-    
-    --fw-regular: 400;
-    --fw-bold: 700;
+  --fs-main: 0.938rem;
+
+  --fw-regular: 400;
+  --fw-bold: 700;
 }
 
 body {
@@ -74,7 +92,7 @@ body {
   font-weight: var(--fw-regular);
   display: grid;
   place-content: center;
-  margin-right: 10rem;
+  margin-right: 4rem;
 }
 
 .container {
@@ -88,7 +106,6 @@ body {
 .column {
   padding: 3.25rem;
   display: grid;
-  
 }
 .column-sedans {
   background-color: var(--primary-bright);
@@ -96,12 +113,10 @@ body {
 
 .column-suvs {
   background-color: var(--primary-mid);
-
 }
 
 .column-luxury {
   background-color: var(--primary-dark);
-
 }
 
 p {
@@ -116,5 +131,50 @@ h1 {
 }
 
 .btn {
+  border-radius: 3rem;
+  width: 75%;
+  height: 75%;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+}
 
+.btn-sedans:hover {
+  background-color: var(--primary-bright);
+  color: var(--neutral-background);
+  border: 0.063rem solid var(--neutral-background);
+}
+.btn-suvs:hover {
+  background-color: var(--primary-mid);
+  color: var(--neutral-background);
+  border: 0.063rem solid var(--neutral-background);
+}
+.btn-luxury:hover {
+  background-color: var(--primary-dark);
+  color: var(--neutral-background);
+  border: 0.063rem solid var(--neutral-background);
+}
+
+.btn-sedans {
+  color: var(--primary-bright);
+}
+
+.btn-suvs {
+  color: var(--primary-mid);
+}
+
+.btn-luxury {
+  color: var(--primary-dark);
+}
+
+@media screen and (max-width: 375px) {
+.container {
+  text-align: center;
+  height: 1400px;
+  width: 275px;
+  flex-direction: column;
+  justify-content: center;
+  padding-right: 1rem;
+  padding-bottom: 22.5rem;
+}
 }
